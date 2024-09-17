@@ -1,0 +1,665 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*import*/
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+	
+@import url("../Fonts/stylesheet.css");
+
+/*general global setting*/
+* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+}
+
+
+
+		
+body{
+  position: relative;
+	background: #ffffff;
+	font-family: 'SVN-Gotham Book', sans-seif;
+	width:100%;
+	
+	overflow: none;
+	font-size: 12px;
+}
+/*Header*/
+
+header{
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 100px;
+	background: transparent;
+/*	background: #ffffff;*/
+	backdrop-filter: blur(10px);   
+	border-bottom: 1px solid rgba(255,255,255,0.5);
+	transition: 1s;
+	z-index: 1300;
+	
+}
+
+header.active{
+	background: #ffffff;
+	box-shadow: 0 0 50px rgba(0,0,0,0.15);
+}
+
+.logo{
+	font-family: "Great Vibes", cursive;
+	font-size: 40px;
+	color: #000000;
+	letter-spacing: 2px;
+	font-weight: 400;
+	text-decoration: none;
+	
+}
+
+.menu{
+	color: #000000;
+	font-size: 2em;
+	transition: 0.5s;
+	display: none;
+	position: absolute;
+	cursor: pointer;
+	right: 0;
+	z-index: 1400;
+
+}
+
+#check {
+	display: none;
+}
+
+/*Menu on mobile*/
+
+.menu .open{
+	display: block;
+}
+
+.menu .close{
+	display: none;
+}
+
+.menu.active .open{
+	display: none;
+}
+
+.menu.active .close{
+	display: block;
+}
+
+/*---------------------*/
+
+.navbar-nav li{
+	list-style: none;
+	margin: 0 15px;
+}
+
+.navbar-nav li a{
+	text-decoration: none;
+	color: #000000;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	cursor: pointer;
+	transition: 0.5s;
+	font-weight: 350;
+
+}
+
+.navbar-nav li a:hover,
+.navbar-nav li a.active{
+	color: var(--primary);
+}
+
+/*Banner*/
+
+/*
+.banner{
+	position: relative;
+	width: auto; 
+	height: auto;
+	padding: 0 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	transition: 0.5s;
+}
+*/
+
+
+#parallax h1{
+	font-size: 120px;
+	text-align: center;
+	color: rgba(225,225,225,.4)
+}
+
+
+
+.parallax-1{
+	background:url("../../Wedding/Images/Thiệp online/Thiep02.png") no-repeat;
+	height: 115vh;
+	background-size: 25%;
+	background-position: center;
+	background-attachment: fixed;
+	
+}
+
+.parallax-2{
+	background:#fff1f5;
+	width:100%;
+	height:auto;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+#parallax ion-icon{
+	font-size: 1.5rem;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+
+.parallax-inner{
+	padding: 10% 0;
+}
+
+#parallax h2{
+	font-size: 32px;
+	color: #FF8DA1;
+	text-align: center;
+	font-weight: 300;
+	letter-spacing: 2px;
+	margin: 20px 0 10px;
+	font-family: "Great Vibes", cursive;
+}
+
+#parallax p{
+	color: #555;
+	text-align: justify;
+	line-height: 30px;
+	margin: 0 50px 40px;
+}
+
+#parallax ion-icon{
+	color:#FF8DA1;
+}
+
+#parallax p:nth-of-type(2),p:nth-of-,type(3){
+	margin: 40px 50px
+}
+
+#invitation img{
+	width: 100%;
+	height: auto;
+	padding-top: 0rem;
+
+	padding-left: 1rem;
+	
+}
+
+#calendar .month{
+	font-weight: 800;
+	text-align: right;
+}
+
+#calendar .saturday img{
+	transform: translate(-20px,22px)
+}
+
+#calendar .date{
+	column-gap: 30px;
+}
+
+#calendar h3{
+	font-family: "Great Vibes", cursive;
+	font-size: 3rem;
+}
+
+#Image h3{
+	font-family: "Great Vibes", cursive;
+	font-size: 4rem;
+	margin-top: 3rem;
+}
+
+/*Dong ho dem nguoc*/
+
+
+#clock .clock{
+		background: url("../Images/Thiệp online/Image01.JPG") no-repeat;
+		background-size: cover;
+		background-position: top;
+	height: 35vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+		position: relative;
+	background-attachment: fixed;
+	}
+
+
+
+#clock .overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+#clock .countdown-container{
+	display: flex;
+	
+}
+
+#clock .big-text{
+	font-size: 3rem;
+	color: #fff;
+padding-top: 1rem;
+}
+
+
+#clock .tittle{
+	margin: 10px;
+	text-align: center;
+	color: #fff;
+	width: 100%;
+	letter-spacing: 2px;
+	padding-top: 2rem;
+	padding-bottom: 1rem;
+	line-height: 2rem;
+}
+
+#clock .tittle span{
+	display: block;
+	font-size: 6rem;
+	letter-spacing: 1rem;
+}
+
+#clock .wrapper{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	height: 20vh;
+	z-index: 2;
+}
+
+#clock .countdown-container span{
+	font-size: 1rem;
+}
+
+#clock .countdown-container {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#clock .countdown-container > div{
+	margin: 0 2rem;
+	text-align: center;
+	border: 2px solid #fff;
+	padding: 10px 10px;
+	border-radius: 12px;
+	box-shadow: 0px 10px 10px rgba(0,0,0,0.5);
+	box-sizing: border-box;
+	color: #fff;
+	min-width: 150px;
+}
+
+@media (max-width:992px){
+	#clock .countdown-container > div{
+	margin: 1rem 1rem;
+
+	}
+	#calendar .date{
+	column-gap: 8px;
+}
+	#clock .big-text{
+		transform: translate(-9px,20px)
+	}
+
+}
+
+@media (max-width:768px){
+	.countdown-container{
+		flex-wrap: wrap;
+	}
+	#clock .tittle{
+		font-size: 12px;
+		padding-right: 3rem;
+		padding-left: 3rem;
+		
+		
+	}
+	#clock .clock {
+		height: 55vh;
+	}
+.countdown-container > div{
+	margin:1rem auto;
+	max-width: 150px;
+}
+
+	.parallax-1{
+		background-size: 50%;
+	}
+	
+	
+	#calendar hr{
+		visibility: hidden;
+	}
+	
+	
+
+.tittle{
+	font-size: 1.5rem;
+	line-height: 3.5rem;
+	margin: 10px 0px;
+}
+	.tittle span{
+		font-size: 2rem;
+		letter-spacing: 1rem;
+	}
+	
+#calendar .month{
+	text-align: center;
+	}
+		
+}
+
+#loingo .BG{
+	background: #fff1f5;
+}
+
+#loingo .BGinner{
+	padding: 3rem;
+	background: #fff;
+	border:2px solid white;
+    border-top-left-radius: 500px;
+    border-top-right-radius: 500px;
+}
+
+#loingo h1{
+	font-family: "Great Vibes", cursive;
+	font-size: 4rem;
+}
+
+.line{
+	height:2px;
+	width: 50%;
+	background: #131313;
+	margin: auto;
+	border-radius: 12px;
+	
+}
+
+#timeline h1{
+	font-family: "Great Vibes", cursive;
+	font-size: 4rem;
+}
+
+.BGinner p{
+	padding-top: 4rem;
+	line-height: 1.5rem;
+}
+
+
+#timeline .time-line{
+	width: 100%;
+	margin: 50px auto;
+	position: relative;
+
+}
+
+#timeline .time-line::after{
+	content: "";
+	position: absolute;
+	right: 50%;
+	top: 0;
+	height: 100%;
+	width: 5px;
+	background: linear-gradient(#ff00e1,#ddff00);
+	border-radius: 50px;
+	animation: LineAnimated 5s linear forwards;
+	z-index: -1;
+}
+
+@keyframes LineAnimated{
+	0%{
+	 height: 0;
+	}
+	100%{
+		height: 100%;
+	}
+}
+
+#timeline .container-timeline{
+	width: 50%;
+	position: relative;
+	
+	padding: 10px 30px;
+	animation: Animate-container 1s linear forwards;
+	opacity: 0;
+	animation-delay: var(--display)
+} 
+
+@keyframes Animate-container{
+	0%{
+		opacity: 0;
+		transform: translateY(-30px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0px)
+	}
+}
+
+#timeline .container-timeline:nth-child(odd){
+	right: -50%;
+}
+
+#timeline .container-timeline:nth-child(even)::before{
+	content: "";
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	background: linear-gradient(#ff00e1,#ddff00);
+	top: 0;
+	right: -20px;
+	border-radius: 50%;
+	z-index: 10;
+}
+
+#timeline .container-timeline:nth-child(even)::before{
+	content: "";
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	background: linear-gradient(#ff00e1,#ddff00);
+	top: 0;
+	left: 96.5%;
+	border-radius: 50%;
+	z-index: 10;
+}
+
+
+
+#timeline .text-content{
+	padding: 20px 20px;
+	box-shadow: 0 5px 10px #191919;
+	border-radius: 10px;
+	display: flex;
+}
+
+
+
+#timeline .text-content p{
+	font-size: 15px;
+/*	margin: 10px 0;*/
+	margin-top: 15px;
+	line-height: 0.3rem;
+}
+
+#timeline ion-icon{
+	color: #131313;
+	padding-right: 0.2rem;
+}
+
+@media (max-width:768px){
+	#timeline .container-timeline{
+		padding: 10px 10px;	
+	}
+	#timeline .text-content{
+		display: block;
+	}
+}
+
+#Image .row{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+
+#Image .column{
+	grid-column: span 3;
+	width: auto;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
+}
+
+
+#hopmungcuoi .BG-hopmung{
+		background:url("../Images/File/Hinh01 (26).JPG") no-repeat;
+	height: 50vh;
+	width: 100%;
+	background-size: cover;
+	background-position: top;
+	position: relative;
+	background-attachment: fixed;
+}
+
+#hopmungcuoi .content-hopmung{
+	position: absolute;
+	text-align: center;
+	left: 25%;
+	right: 25%;
+	bottom: 53.5%;
+
+	color: white;
+	padding: 1rem;
+	border-radius: 12px;
+	z-index: 3;
+}
+
+#hopmungcuoi .BG-overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 100%;
+	z-index: 3;
+}
+ 
+
+#hopmungcuoi .popup{
+	position: absolute;
+	z-index: 1200;
+	left: 25%;
+	right: 25%;
+	bottom: 25%;
+}
+
+#hopmungcuoi ion-icon{
+	font-size: 5rem;
+	background: #545353;
+	padding: 1rem;
+	border-radius: 12px;
+	color: #fff;
+	box-shadow: 0px 10px 10px rgba(0,0,0,0.5);
+}
+
+.QR{
+ display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+	margin-top: 3rem;
+	width: 20%;
+}
+
+@media (max-width:768px){
+	#hopmungcuoi .QR{
+		width: 75%;
+	}
+	}
+
+
+#location h1{
+	font-family: "Great Vibes", cursive;
+	margin-top: 3rem;
+	font-size: 5rem;
+	text-align: center;
+}
+
+ .location h1{
+	margin-bottom: 50px;
+}
+
+ .location .info{
+	width: 100%;
+	background: #ffffff;
+}
+
+ .location .info ion-icon{
+	font-size: 0.6em;
+	padding: 8px;
+	color: var(--primary);
+	float: left;
+	width: 45px;
+	height: 45px;
+	background: #f4e3ea;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	transition: 0.3s;
+	margin-right: 20px;
+}
+
+.location .info h4{
+	padding: 0 0 0 60px;
+	font-size: 1.6em;
+	font-weight: 600;
+	margin-bottom: 6px;
+	color: #111111;
+}
+
+.location .info p{
+	padding: 0 0 0 60px;
+
+	font-weight: 300;
+	margin-bottom: 0px;
+	color: #111111;
+}
+
+ .location .info .email,
+ .location .info .phone{
+	margin-top: 40px;
+}
